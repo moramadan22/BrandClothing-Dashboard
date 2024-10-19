@@ -1,0 +1,77 @@
+﻿@using ClothingBrandDashboard.ModelVW
+@model GetOrder
+
+<div class="container">
+    <h2>Order Details</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th hidden>Order ID</th>
+                <td hidden>@Model.Id</td>
+            </tr>
+            <tr>
+                <th>Order Date</th>
+                <td>@Model.OrderDate.ToString("g")</td> <!-- Use a format you prefer -->
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <td>@Model.TotalPrice.ToString("C")</td> <!-- Formats as currency -->
+            </tr>
+            <tr>
+                <th>Payment Status</th>
+                <td>@Model.PaymentStatus</td>
+            </tr>
+            <tr>
+                <th>Order Status</th>
+                <td>@Model.OrderStatus</td>
+            </tr>
+            <tr>
+                <th>Shipping Address</th>
+                <td>
+                    @Model.AddressLine1<br />
+                    @if (!string.IsNullOrEmpty(Model.AddressLine2))
+                    {
+                        @Model.AddressLine2
+
+                        <br />
+                    }
+                    @Model.City, @Model.State @Model.PostalCode<br />
+                    @Model.Country
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Order Items</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.OrderItems != null && Model.OrderItems.Any())
+            {
+                foreach (var item in Model.OrderItems)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.Price.ToString("C")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">No items in this order.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Order/Index" class="btn btn-primary">Back to Orders</a>
+</div>

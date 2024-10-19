@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.bigtitle = "Category Management";
+    ViewBag.smalltitle = "all Categories ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<div>
+    <a href="/Category/Create" class="btn btn-primary">Create</a>
+
+</div>
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    <h2>hi</h2>
+    <script src="~/js/Category.js"></script>
+
+
+
+}

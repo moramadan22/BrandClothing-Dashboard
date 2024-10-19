@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.bigtitle = "Discount Management";
+    ViewBag.smalltitle = "all Discounts ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<div>
+    <a href="/Discount/Create" class="btn btn-primary">Create</a>
+
+</div>
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Percentage</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    <h2>hi</h2>
+    <script src="~/js/Discount.js"></script>
+
+
+
+}
