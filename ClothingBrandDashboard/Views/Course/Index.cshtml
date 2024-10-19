@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.bigtitle = "Course Management";
+    ViewBag.smalltitle = "all Courses ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<div>
+    <a href="/Course/Create" class="btn btn-primary">Create</a>
+
+</div>
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    <h2>hi</h2>
+    <script src="~/js/Course.js"></script>
+
+
+
+}

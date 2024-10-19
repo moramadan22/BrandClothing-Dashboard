@@ -1,0 +1,107 @@
+﻿@using ClothingBrandDashboard.ModelVW
+
+@model GetCustomOrder
+
+<div class="container">
+    <h2>Custom Order Details</h2>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            Order ID: @Model.Id
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h5>Design Description</h5>
+                    <p>@Model.DesignDescription</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Fabric Details</h5>
+                    <p>@Model.FabricDetails</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <h5>Deposit Amount</h5>
+                    <p>@Model.DepositAmount.ToString("C")</p>
+                </div>
+
+                
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h5>Shoulder Width</h5>
+                    <p>@Model.ShoulderWidth cm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Chest Circumference</h5>
+                    <p>@Model.ChestCircumference cm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Waist Circumference</h5>
+                    <p>@Model.WaistCircumference cm</p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h5>Hip Circumference</h5>
+                    <p>@Model.HipCircumference cm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Waist Length</h5>
+                    <p>@Model.WaistLength cm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Arm Length</h5>
+                    <p>@Model.ArmLength cm</p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h5>Bicep Size</h5>
+                    <p>@Model.BicepSize cm</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Model Length</h5>
+                    <p>@Model.ModelLength cm</p>
+                </div>
+               @*  <div class="col-md-4">
+                    <h5>User ID</h5>
+                    <p>@Model.UserId</p>
+                </div> *@
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <div class="mb-3">
+                    <h5>Image</h5>
+                    <img src="@Model.ImageUrl" alt="Custom Order Image" class="img-fluid" />
+                </div>
+            }
+        </div>
+    </div>
+
+    <a href="/CustomOrder/Index" class="btn btn-primary">Back to Custom Orders</a>
+</div>
+
+@* @helper GetBadgeClass(string status)
+{
+    switch (status)
+    {
+        case "Completed":
+            @:text-bg-success
+            break;
+        case "Pending":
+            @:text-bg-warning
+            break;
+        case "Cancelled":
+            @:text-bg-danger
+            break;
+        default:
+            @:text-bg-secondary
+            break;
+    }
+} *@

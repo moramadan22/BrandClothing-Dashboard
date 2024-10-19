@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.bigtitle = "User Management";
+    ViewBag.smalltitle = "all Users ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<div>
+    <a href="/User/Create" class="btn btn-primary">Create</a>
+
+</div>
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    <h2>hi</h2>
+    <script src="~/js/User.js"></script>
+
+
+
+}

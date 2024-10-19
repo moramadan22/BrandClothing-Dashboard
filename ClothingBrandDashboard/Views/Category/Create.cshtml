@@ -1,0 +1,35 @@
+﻿@using ClothingBrandDashboard.ModelVW
+@model Category
+@{
+    ViewBag.bigtitle = "Category Management";
+    ViewBag.smalltitle = "Create ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<form method="post" asp-action="Create" asp-controller="Category" enctype="multipart/form-data">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+
+    </div>
+
+   
+
+
+    <div>
+        <button type="submit" class="btn btn-primary"> Create</button>
+        <a asp-action="Index" asp-controller="Category" class="btn btn-warning"> Back Index</a>
+
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

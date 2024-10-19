@@ -1,0 +1,100 @@
+﻿@using ClothingBrandDashboard.ModelVW
+@model ProductVm
+@{
+    ViewBag.bigtitle = "Product Management";
+    ViewBag.smalltitle = "Edit ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+@* <h2>
+    Create Category
+</h2> *@
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Edit" asp-controller="Product" enctype="multipart/form-data">
+            <input asp-for="Id" hidden />
+            <input asp-for="Image" hidden />
+
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+
+            </div>
+
+            <div>
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+
+            </div>
+
+            <div>
+                @* <label asp-for="CategoryId"></label> *@
+                @* <input asp-for="CategoryId" class="form-control" /> *@
+                <select asp-for="CategoryId" class="form-control" asp-items="Model.Categories">
+                    <option disabled > --Select Category-- </option>
+                </select>
+                @* <span asp-validation-for="CategoryId" class="text-danger"></span> *@
+
+            </div>
+
+
+            <div>
+                <label asp-for="Image"></label>
+                <input asp-for="Image" class="form-control" type="file" name="Image" id="Image" />
+
+                @* <span asp-validation-for="Name" class="text-danger"></span> *@
+            </div>
+            <br />
+
+
+            <div>
+                <label asp-for="StockQuantity"></label>
+                <input asp-for="StockQuantity" class="form-control" />
+                <span asp-validation-for="StockQuantity" class="text-danger"></span>
+
+            </div>
+            <div>
+                <label asp-for="ISBN"></label>
+                <input asp-for="ISBN" class="form-control" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+
+            </div>
+
+            <div>
+               @*  <label asp-for="DiscountId"></label>
+                <input asp-for="DiscountId" class="form-control" />
+                <span asp-validation-for="DiscountId" class="text-danger"></span> *@
+                <label asp-for="DiscountId"></label>
+                <select asp-for="DiscountId" class="form-control" asp-items="Model.Discounts">
+                    <option disabled selected> --Select Discount-- </option>
+                </select>
+
+            </div>
+
+
+            <div>
+                <button type="submit" class="btn btn-success"> Save</button>
+                <a asp-action="Index" asp-controller="Product" class="btn btn-warning"> Back Index</a>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <div class="container">
+            <img src=@ViewData["img"] alt="Alternate Text" height="300" width="300" />
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

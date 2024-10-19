@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.bigtitle = "Product Management";
+    ViewBag.smalltitle = "all Products ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+<div>
+    <a href="/Product/Create" class="btn btn-primary">Create</a>
+
+</div>
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>StockQuentity</th>
+            <th>Categoryname</th>
+            <th>Discount</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    <h2>hi</h2>
+    <script src="~/js/Products.js"></script>
+
+
+
+}
