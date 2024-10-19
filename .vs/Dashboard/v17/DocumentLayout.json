@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ai\\graduation_dashboard\\Dashboard\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\ai\\graduation_dashboard\\dashboard\\clothingbranddashboard\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\ai\\graduation_dashboard\\dashboard\\clothingbranddashboard\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Controllers\\CategoryController.cs",
-              "ToolTip": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "ClothingBrandDashboard\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAAGcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T01:31:11.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Controllers\\OrderController.cs",
-              "ToolTip": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "ClothingBrandDashboard\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAwwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T01:31:11.942Z",
-              "EditorCaption": ""
             }
           ]
         }

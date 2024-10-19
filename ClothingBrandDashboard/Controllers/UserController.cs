@@ -3,6 +3,7 @@ using ClothingBrandDashboard.ModelVW;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
 namespace ClothingBrandDashboard.Controllers
@@ -12,9 +13,11 @@ namespace ClothingBrandDashboard.Controllers
         HttpClient client = new HttpClient();
         public string endpoint = "https://localhost:7108/api";
         List<Role> roles= new List<Role>();
-        public UserController()
+        private readonly string? token;
+        public UserController(IHttpContextAccessor httpContextAccessor)
         {
-
+            token = httpContextAccessor.HttpContext.Session.GetString("AccessToken");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
         public async Task<IActionResult> Index()
         {
@@ -24,6 +27,11 @@ namespace ClothingBrandDashboard.Controllers
         }
         public async Task<IActionResult> Getdata()
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             List<GetUserWithRole> Users = new List<GetUserWithRole>();
             Users = await client.GetFromJsonAsync<List<GetUserWithRole>>(endpoint+ "/Account/identity/user-with-role");
             return Json(new { data = Users });
@@ -32,6 +40,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             var UserVm = new CreateUserWithDrop();
             roles = await client.GetFromJsonAsync<List<Role>>(endpoint + "/Account/identity/role/list");
             UserVm.Roles = roles.Select(s => new SelectListItem {
@@ -58,6 +71,11 @@ namespace ClothingBrandDashboard.Controllers
 
                 try
                 {
+                    if (string.IsNullOrEmpty(token))
+                    {
+                        // Handle case where the token is not available
+                        return Unauthorized();
+                    }
                     // Send the POST request to the API
                     var response = await client.PostAsJsonAsync<CreateUser>(endpoint+"/Account/identity/create", userDb);
 
@@ -92,6 +110,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(string id)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             //List<Course> Courses = new List<Course>();
             //GetUserWithRole user = await client.GetFromJsonAsync<GetUserWithRole>(endpoint + "/Account/identity/user-with-role").();
             List<GetUserWithRole> Users = new List<GetUserWithRole>();
@@ -132,6 +155,12 @@ namespace ClothingBrandDashboard.Controllers
                 var changerole = new ChangeRole.ChangeRoleDto(createUserWith.Email, createUserWith.Role);
 
                 //changerole.
+
+                if (string.IsNullOrEmpty(token))
+                {
+                    // Handle case where the token is not available
+                    return Unauthorized();
+                }
                 var response = await client.PostAsJsonAsync(endpoint + "/Account/identity/role/change", changerole);
 
                 return RedirectToAction(nameof(Index));
@@ -146,6 +175,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpDelete]
         public IActionResult Delete(string id)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             var user = client.DeleteAsync(endpoint + "/Account/DeleteUser"+ "?id=" + id);
             if (user == null||user.IsFaulted)
             {

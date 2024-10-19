@@ -1,5 +1,6 @@
 ﻿using ClothingBrandDashboard.ModelVW;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace ClothingBrandDashboard.Controllers
 {
@@ -7,9 +8,11 @@ namespace ClothingBrandDashboard.Controllers
     {
         HttpClient client = new HttpClient();
         public string endpoint = "https://localhost:7108/api/Category";
-        public CategoryController()
+        private readonly string? token;
+        public CategoryController(IHttpContextAccessor httpContextAccessor)
         {
-
+            token = httpContextAccessor.HttpContext.Session.GetString("AccessToken");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
         public async Task<IActionResult> Index()
         {
@@ -19,6 +22,11 @@ namespace ClothingBrandDashboard.Controllers
         }
         public async Task<IActionResult> Getdata()
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             List<GetCategory> categories = new List<GetCategory>();
             categories = await client.GetFromJsonAsync<List<GetCategory>>(endpoint);
             return Json(new { data = categories });
@@ -43,6 +51,11 @@ namespace ClothingBrandDashboard.Controllers
             // Check if the model state is valid
             if (ModelState.IsValid)
             {
+                if (string.IsNullOrEmpty(token))
+                {
+                    // Handle case where the token is not available
+                    return Unauthorized();
+                }
 
                 try
                 {
@@ -74,6 +87,7 @@ namespace ClothingBrandDashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
+
             //List<Course> Courses = new List<Course>();
             Category category = await client.GetFromJsonAsync<Category>(endpoint + "/" + id);
             //Console.WriteLine(course);
@@ -102,6 +116,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpDelete]
         public IActionResult Delete(int? id)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             //var deletedproduct= _context.products.Find(product.Id);
             var category = client.DeleteAsync(endpoint + "?id=" + id);
             if (category == null)

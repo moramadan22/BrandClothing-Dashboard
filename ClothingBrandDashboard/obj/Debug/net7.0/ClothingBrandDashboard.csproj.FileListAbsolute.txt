@@ -224,3 +224,4 @@ D:\ai\graduation_dashboard\Dashboard\ClothingBrandDashboard\bin\Debug\net7.0\run
 D:\ai\graduation_dashboard\Dashboard\ClothingBrandDashboard\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\ai\graduation_dashboard\Dashboard\ClothingBrandDashboard\obj\Debug\net7.0\ClothingBrandDashboard.csproj.AssemblyReference.cache
 D:\ai\graduation_dashboard\Dashboard\ClothingBrandDashboard\obj\Debug\net7.0\Clothing.59230DB6.Up2Date
+D:\ai\graduation_dashboard\Dashboard\ClothingBrandDashboard\obj\Debug\net7.0\ClothingBrandDashboard.sourcelink.json

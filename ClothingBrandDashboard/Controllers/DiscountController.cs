@@ -1,5 +1,6 @@
 ﻿using ClothingBrandDashboard.ModelVW;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
 namespace ClothingBrandDashboard.Controllers
@@ -8,9 +9,11 @@ namespace ClothingBrandDashboard.Controllers
     {
         HttpClient client = new HttpClient();
         public string endpoint = "https://localhost:7108/api/Discount";
-        public DiscountController()
+        private readonly string? token;
+        public DiscountController(IHttpContextAccessor httpContextAccessor)
         {
-
+            token = httpContextAccessor.HttpContext.Session.GetString("AccessToken");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
         public async Task<IActionResult> Index()
         {
@@ -20,6 +23,11 @@ namespace ClothingBrandDashboard.Controllers
         }
         public async Task<IActionResult> Getdata()
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             List<GetDiscount> Discounts = new List<GetDiscount>();
             Discounts = await client.GetFromJsonAsync<List<GetDiscount>>(endpoint);
             return Json(new { data = Discounts });
@@ -44,9 +52,14 @@ namespace ClothingBrandDashboard.Controllers
             // Check if the model state is valid
             if (ModelState.IsValid)
             {
-
+                if (string.IsNullOrEmpty(token))
+                {
+                    // Handle case where the token is not available
+                    return Unauthorized();
+                }
                 try
                 {
+
                     // Send the POST request to the API
                     var response = await client.PostAsJsonAsync<Discount>(endpoint, discount);
 
@@ -75,6 +88,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             //List<Course> Courses = new List<Course>();
             Discount discount = await client.GetFromJsonAsync<Discount>(endpoint + "/" + id);
             //Console.WriteLine(course);
@@ -88,6 +106,11 @@ namespace ClothingBrandDashboard.Controllers
             {
                 if (!ModelState.IsValid)
                     return View(discount);
+                if (string.IsNullOrEmpty(token))
+                {
+                    // Handle case where the token is not available
+                    return Unauthorized();
+                }
 
                 var response = await client.PutAsJsonAsync(endpoint + "/" + id, discount);
 
@@ -103,6 +126,11 @@ namespace ClothingBrandDashboard.Controllers
         [HttpDelete]
         public IActionResult Delete(int? id)
         {
+            if (string.IsNullOrEmpty(token))
+            {
+                // Handle case where the token is not available
+                return Unauthorized();
+            }
             //var deletedproduct= _context.products.Find(product.Id);
             var discount = client.DeleteAsync(endpoint + "?id=" + id);
             if (discount == null)

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using NuGet.Common;
 using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
@@ -12,7 +13,18 @@ namespace ClothingBrandDashboard.Controllers
 {
     public class ProductController : Controller
     {
-        HttpClient client=new HttpClient();
+
+        /*
+          var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+         
+         */
+        HttpClient client =new HttpClient();
         public string endpoint = "https://localhost:7108/api/Product";
         public string endpointCat = "https://localhost:7108/api/Category";
         public string endpointDis = "https://localhost:7108/api/Discount";
@@ -21,11 +33,27 @@ namespace ClothingBrandDashboard.Controllers
 
         List<GetCategory> categories;
         List<GetDiscount> Disccounts;
+        //string token {  get; set; }
 
         private IWebHostEnvironment _webHostEnvironment;
 
+
+
         public ProductController(IWebHostEnvironment webHostEnvironment, IHttpClientFactory httpClientFactory)
         {
+
+
+            
+
+            //var token = HttpContext.Session.GetString("AccessToken");
+
+
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //var 
+            //token = HttpContext.Session.GetString("AccessToken");
+
+            //var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiTW9oYW1lZHJhbWFkYW41NDk2QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Ik1vaGFtZWRyYW1hZGFuNTQ5NkBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNWEyOGJhMDQtMzU1Ni00MTBmLWFiMGEtNDQxZTQ4OGFhZjA2IiwiRnVsbE5hbWUiOiJNb2hhbWVkIiwiZXhwIjoxNzI5MzQ4MTM3LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTA4LyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMC8ifQ.iISt52ilLbjraMxcKPwFs6jAQmsZCr8uctRFO6tGslA";
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             categories = new List<GetCategory>();
             Disccounts = new List<GetDiscount>();
 
@@ -43,6 +71,17 @@ namespace ClothingBrandDashboard.Controllers
         }
         public async Task<IActionResult> Getdata()
         {
+
+            //------------
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //----------------------------
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
             List<ProductCat> products = new List<ProductCat>();
             products = await client.GetFromJsonAsync<List<ProductCat>>(endpoint);
             return Json(new { data = products });
@@ -54,6 +93,14 @@ namespace ClothingBrandDashboard.Controllers
         {
             ProductVm productvm = new ProductVm();
             var product =new Product();
+            //------------
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //----------------------------
 
             categories = await client.GetFromJsonAsync<List<GetCategory>>(endpointCat);
             productvm.Categories = categories.Select(s => new SelectListItem
@@ -129,7 +176,14 @@ namespace ClothingBrandDashboard.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductVm productVm)
         {
-
+            //------------
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //----------------------------
 
             // Check if the model state is valid
             if (ModelState.IsValid)
@@ -201,6 +255,18 @@ namespace ClothingBrandDashboard.Controllers
             {
                 return NotFound();
             }
+
+
+
+            //------------
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //----------------------------
+
             //var product = _context.products.Find(id);
             ProductCat productimg = await client.GetFromJsonAsync<ProductCat>(endpoint + "/" + id);
 
@@ -351,6 +417,16 @@ namespace ClothingBrandDashboard.Controllers
 
                     try
                     {
+
+                        //------------
+                        var token = HttpContext.Session.GetString("AccessToken");
+                        if (string.IsNullOrEmpty(token))
+                        {
+                            return Unauthorized();
+                        }
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                        //----------------------------
+
                         // Send the PUT request to the API
                         var response = await client.PutAsync(endpoint + "/" + productVm.Id, content);
 
@@ -386,6 +462,15 @@ namespace ClothingBrandDashboard.Controllers
         public IActionResult Delete(int? id)
         {
             //var deletedproduct= _context.products.Find(product.Id);
+
+            //------------
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            //----------------------------
             var deletedproduct = client.DeleteAsync(endpoint +"?id=" + id);
             if (deletedproduct == null)
             {
