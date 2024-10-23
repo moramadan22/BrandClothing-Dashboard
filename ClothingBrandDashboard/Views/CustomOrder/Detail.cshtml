@@ -1,6 +1,15 @@
 ﻿@using ClothingBrandDashboard.ModelVW
 
 @model GetCustomOrder
+<style>
+    .hover-effect {
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+        .hover-effect:hover {
+            transform: scale(1.5); /* Scale image to 110% on hover */
+        }
+</style>
 
 <div class="container">
     <h2>Custom Order Details</h2>
@@ -78,9 +87,13 @@
             {
                 <div class="mb-3">
                     <h5>Image</h5>
-                    <img src="@Model.ImageUrl" alt="Custom Order Image" class="img-fluid" />
+                    <img src="@Model.ImageUrl" alt="Custom Order Image" class="img-fluid hover-effect" width="500" height="500" />
                 </div>
             }
+
+
+
+
         </div>
     </div>
 

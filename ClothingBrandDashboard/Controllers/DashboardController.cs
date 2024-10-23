@@ -55,13 +55,7 @@ namespace ClothingBrandDashboard.Controllers
             List<GetCategory> categories = new List<GetCategory>();
             categories = await client.GetFromJsonAsync<List<GetCategory>>(endpointCategory);
 
-            //var token = HttpContext.Session.GetString("AccessToken");
-            //if (string.IsNullOrEmpty(token))
-            //{
-            //    return Unauthorized();
-            //}
-
-            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+          
 
 
             List<GetOrder> orders = new List<GetOrder>();
@@ -77,6 +71,13 @@ namespace ClothingBrandDashboard.Controllers
             List<GetCustomOrder> customOrders = new List<GetCustomOrder>();
             customOrders = await client.GetFromJsonAsync<List<GetCustomOrder>>(endpointCustomOrders);
 
+            decimal totalRevenue = 0;
+
+            foreach (var item in orders)
+            {
+                totalRevenue += item.TotalPrice;
+            }
+
 
 
             ViewData["courses"] = Courses.Count();
@@ -86,6 +87,9 @@ namespace ClothingBrandDashboard.Controllers
             ViewData["users"] = users.Count();
             ViewData["discounts"] = discounts.Count();
             ViewData["customOrders"] = customOrders.Count();
+            ViewData["totalRevenue"] = totalRevenue.ToString("C");
+
+
 
 
 

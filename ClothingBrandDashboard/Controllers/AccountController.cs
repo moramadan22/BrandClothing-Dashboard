@@ -52,6 +52,8 @@ namespace ClothingBrandDashboard.Controllers
                 }
 
                 ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+
             }
 
             return View(model);

@@ -1,0 +1,31 @@
+﻿.search-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; /* Add space between search and table */
+}
+
+    .search-wrapper input {
+        padding-right: 30px; /* Space for the icon */
+        border-radius: 20px; /* Change shape */
+    }
+
+    .search-wrapper i {
+        position: absolute;
+        right: 10px; /* Position the icon */
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa; /* Icon color */
+        pointer-events: none; /* Prevent mouse events on the icon */
+    }
+
+.dataTables_filter {
+    display: none; /* Hide the default search box */
+}
+
+.dataTables_filter input {
+    background-color: #f0f0f0; /* Change this to your desired color */
+    border: 1px solid #ccc; /* Optional: adjust the border */
+    padding: 5px; /* Optional: adjust padding */
+    border-radius: 4px; /* Optional: add border-radius */
+}
+

@@ -2,43 +2,83 @@ let dtable;
 $(document).ready(function () {
     loadData();
 
+    // General search input
+    $('#customSearch').on('keyup', function () {
+        if (dtable && typeof dtable.search === 'function') {
+            dtable.search(this.value).draw(); // Filter the DataTable with the custom input
+        } else {
+            console.error("dtable is not defined or not a DataTable instance");
+        }
+    });
+
+    // Date filter event listeners
+    $('#startDate, #endDate').on('change', function () {
+        filterByDateRange();
+    });
 });
 
 function loadData() {
-    dtable = $("#myTable").dataTable({
+    dtable = $("#myTable").DataTable({
         "ajax": {
             "url": "/Order/GetData"
         },
         "columns": [
             { "data": "id" },
-            /*{ "data": "orderItems[id].productName" },*/
             {
                 "data": "orderItems",
                 "render": function (data) {
-                    // Check if orderItems exists and has items
                     if (data && data.length > 0) {
-                        // Join the product names into a single string
                         return data.map(item => item.productName).join(", ");
                     }
                     return "No items"; // Default message if no items
                 }
             },
             { "data": "orderStatus" },
-            { "data": "orderDate" },
+            {
+                "data": "orderDate",
+                "render": function (data) {
+                    return new Date(data).toLocaleDateString(); // Format date for display
+                }
+            },
             {
                 "data": "id",
                 "render": function (data) {
                     return `
-                    <a href="/Order/Detail/${data}" class="btn btn-warning" >Details</a>
-                    <a onClick= x("/Order/Delete/${data}") class="btn btn-danger">Delete</a> 
-                    `
+                    <div class="d-flex">
+                      <a href="/Order/Detail/${data}" class="btn btn-warning" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center; margin-right: 10px;">Detail</a>
+                      <a onClick="x('/Order/Delete/${data}')" class="btn btn-danger" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center;">Delete</a>
+                    </div>
+                    `;
                 }
             }
-
         ]
-
     });
 }
+
+function filterByDateRange() {
+    const startDate = $('#startDate').val();
+    const endDate = $('#endDate').val();
+
+    // Clear existing date filter
+    $.fn.dataTable.ext.search.pop();
+
+    // Custom filter function
+    $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+        const orderDate = new Date(data[3]); // Assuming orderDate is the fourth column (index 3)
+        let isValid = true;
+
+        if (startDate) {
+            isValid = isValid && orderDate >= new Date(startDate);
+        }
+        if (endDate) {
+            isValid = isValid && orderDate <= new Date(endDate);
+        }
+        return isValid; // Include this row if valid
+    });
+
+    dtable.draw(); // Redraw the DataTable with the new filter
+}
+
 function x(url) {
     //alert(url)
     //"/Admin/Product/Delete/${data}"
@@ -64,11 +104,11 @@ function x(url) {
                 url: url,
                 type: "DELETE",
                 success: function (data) {
-                    console.log(data)
+                    //console.log(data)
 
                     if (data.success) {
                         //dtable.ajax.reload();
-                        toaster.success(data.message);
+                        //toaster.success(data.message);
                         //window.location.reload();
 
                     }

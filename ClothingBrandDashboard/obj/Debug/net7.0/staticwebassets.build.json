@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xo16r3sPNR/b2IQ4tCVzorsClGqo2JK9T4HBPWxS8bI=",
+  "Hash": "6AQyl7/d6ogsyvtLKDpg4TvlshZrSTvid2+U1WJBZEw=",
   "Source": "ClothingBrandDashboard",
   "BasePath": "_content/ClothingBrandDashboard",
   "Mode": "Default",
@@ -1501,8 +1501,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "py5gsmc56p",
-      "Integrity": "MTbZ8w0wFLUKBDbb7z6pNe25eFH04v6VrCFlkd/E5fs=",
+      "Fingerprint": "10yallo6ie",
+      "Integrity": "X4z1QYGDBt6Md+hxeqydmKLZ5UhrSuDagoGaE5bL9sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Category.js"
@@ -1522,8 +1522,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "o6lepbec5y",
-      "Integrity": "wAdbN6FCsQxhGrXXZLVXA755SXMsJryvvSURHZggulo=",
+      "Fingerprint": "ua0bvdmp22",
+      "Integrity": "RknWx32/b3YPRp15HEaHDaDCy5R/GvJot4WrOi0/eSw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Course.js"
@@ -1543,8 +1543,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "np21tu7gkh",
-      "Integrity": "BVcDtAdd41D0N2fgkssDQqi0Sy2qqw1Y55OIhmzzc6k=",
+      "Fingerprint": "i7lhe2qh7w",
+      "Integrity": "nntJetX67dpDMkM/Ip4qhbQVQqKP/IZKaZlVTwxobfM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\CustomOrder.js"
@@ -1564,8 +1564,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dfa1ok0qv3",
-      "Integrity": "CVP6c7Yu2GplwMdixAmCzPnZIqBQ9HB7wKTyfgMKZC8=",
+      "Fingerprint": "5icn55qzh8",
+      "Integrity": "86eO145HdNeYFy10zLX3diSEhwEdOBTZk6sm2ZqiXEY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Discount.js"
@@ -1585,8 +1585,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hoiy92yuc4",
-      "Integrity": "79tjWX+v4YWsKVrLcal0/OxoCAN79XR0nG7PzquEQVg=",
+      "Fingerprint": "xki67vjkad",
+      "Integrity": "kRZrEfArAgJPQelLyE/FmOj3FGpNjS4Q3IMstwdyIQ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Order.js"
@@ -1606,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cg13fz6mjv",
-      "Integrity": "5BqGcgm0MdXvf3d4Utyoz+T3OP4vq7JrnS1NZV4w+k4=",
+      "Fingerprint": "69dmtlifr5",
+      "Integrity": "mn3qm4NMs7h2xgoC+P+GBJ64WRg9DL85PU+0UCfoUfs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Products.js"
@@ -1648,8 +1648,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "936by2kcd6",
-      "Integrity": "ayK+ScT8Ote4Iz6dSCRqxaGZVMd8t1wA/PInRKmXtD8=",
+      "Fingerprint": "bggbgyb5e1",
+      "Integrity": "9Q9V8mXUVrGZb7+j1e9usC6QgGu/PcPad5f7F5cjENY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\User.js"
@@ -3753,6 +3753,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\style.css",
+      "SourceId": "ClothingBrandDashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\",
+      "BasePath": "_content/ClothingBrandDashboard",
+      "RelativePath": "style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vtjm1lt43f",
+      "Integrity": "HQ1qVlEy4JO2kb/tFrhIqkPto8pyGIRtUaVHxJqgW7o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ],
   "Endpoints": [
@@ -6649,7 +6670,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 18:48:16 GMT"
+          "Value": "Mon, 21 Oct 2024 11:33:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6686,7 +6707,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 18:48:16 GMT"
+          "Value": "Mon, 21 Oct 2024 11:33:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6731,7 +6752,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 18:48:16 GMT"
+          "Value": "Mon, 21 Oct 2024 11:33:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6776,7 +6797,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 18:48:16 GMT"
+          "Value": "Mon, 21 Oct 2024 11:33:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6813,7 +6834,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Sep 2024 20:50:00 GMT"
+          "Value": "Sun, 20 Oct 2024 16:55:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7096,7 +7117,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Sep 2024 20:50:00 GMT"
+          "Value": "Sun, 20 Oct 2024 16:55:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9191,7 +9212,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Sep 2024 20:50:10 GMT"
+          "Value": "Mon, 21 Oct 2024 00:15:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9310,7 +9331,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 01 Sep 2024 20:50:10 GMT"
+          "Value": "Mon, 21 Oct 2024 00:15:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9497,6 +9518,51 @@
       ]
     },
     {
+      "Route": "js/Category.10yallo6ie.js",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Category.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4938"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X4z1QYGDBt6Md+hxeqydmKLZ5UhrSuDagoGaE5bL9sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Oct 2024 15:05:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "10yallo6ie"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Category.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X4z1QYGDBt6Md+hxeqydmKLZ5UhrSuDagoGaE5bL9sE="
+        }
+      ]
+    },
+    {
       "Route": "js/Category.js",
       "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Category.js",
       "Selectors": [],
@@ -9507,7 +9573,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4373"
+          "Value": "4938"
         },
         {
           "Name": "Content-Type",
@@ -9515,11 +9581,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MTbZ8w0wFLUKBDbb7z6pNe25eFH04v6VrCFlkd/E5fs=\""
+          "Value": "\"X4z1QYGDBt6Md+hxeqydmKLZ5UhrSuDagoGaE5bL9sE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
+          "Value": "Mon, 21 Oct 2024 15:05:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9529,52 +9595,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MTbZ8w0wFLUKBDbb7z6pNe25eFH04v6VrCFlkd/E5fs="
-        }
-      ]
-    },
-    {
-      "Route": "js/Category.py5gsmc56p.js",
-      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Category.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4373"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MTbZ8w0wFLUKBDbb7z6pNe25eFH04v6VrCFlkd/E5fs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "py5gsmc56p"
-        },
-        {
-          "Name": "label",
-          "Value": "js/Category.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MTbZ8w0wFLUKBDbb7z6pNe25eFH04v6VrCFlkd/E5fs="
+          "Value": "sha256-X4z1QYGDBt6Md+hxeqydmKLZ5UhrSuDagoGaE5bL9sE="
         }
       ]
     },
@@ -9589,7 +9610,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4533"
+          "Value": "3587"
         },
         {
           "Name": "Content-Type",
@@ -9597,11 +9618,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wAdbN6FCsQxhGrXXZLVXA755SXMsJryvvSURHZggulo=\""
+          "Value": "\"RknWx32/b3YPRp15HEaHDaDCy5R/GvJot4WrOi0/eSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:27:23 GMT"
+          "Value": "Mon, 21 Oct 2024 15:12:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9611,12 +9632,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wAdbN6FCsQxhGrXXZLVXA755SXMsJryvvSURHZggulo="
+          "Value": "sha256-RknWx32/b3YPRp15HEaHDaDCy5R/GvJot4WrOi0/eSw="
         }
       ]
     },
     {
-      "Route": "js/Course.o6lepbec5y.js",
+      "Route": "js/Course.ua0bvdmp22.js",
       "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Course.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -9626,7 +9647,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4533"
+          "Value": "3587"
         },
         {
           "Name": "Content-Type",
@@ -9634,11 +9655,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wAdbN6FCsQxhGrXXZLVXA755SXMsJryvvSURHZggulo=\""
+          "Value": "\"RknWx32/b3YPRp15HEaHDaDCy5R/GvJot4WrOi0/eSw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:27:23 GMT"
+          "Value": "Mon, 21 Oct 2024 15:12:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9648,7 +9669,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o6lepbec5y"
+          "Value": "ua0bvdmp22"
         },
         {
           "Name": "label",
@@ -9656,7 +9677,52 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wAdbN6FCsQxhGrXXZLVXA755SXMsJryvvSURHZggulo="
+          "Value": "sha256-RknWx32/b3YPRp15HEaHDaDCy5R/GvJot4WrOi0/eSw="
+        }
+      ]
+    },
+    {
+      "Route": "js/CustomOrder.i7lhe2qh7w.js",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\CustomOrder.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6287"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nntJetX67dpDMkM/Ip4qhbQVQqKP/IZKaZlVTwxobfM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 18:39:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i7lhe2qh7w"
+        },
+        {
+          "Name": "label",
+          "Value": "js/CustomOrder.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nntJetX67dpDMkM/Ip4qhbQVQqKP/IZKaZlVTwxobfM="
         }
       ]
     },
@@ -9671,7 +9737,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4467"
+          "Value": "6287"
         },
         {
           "Name": "Content-Type",
@@ -9679,11 +9745,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"BVcDtAdd41D0N2fgkssDQqi0Sy2qqw1Y55OIhmzzc6k=\""
+          "Value": "\"nntJetX67dpDMkM/Ip4qhbQVQqKP/IZKaZlVTwxobfM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 23:25:54 GMT"
+          "Value": "Wed, 23 Oct 2024 18:39:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9693,57 +9759,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-BVcDtAdd41D0N2fgkssDQqi0Sy2qqw1Y55OIhmzzc6k="
+          "Value": "sha256-nntJetX67dpDMkM/Ip4qhbQVQqKP/IZKaZlVTwxobfM="
         }
       ]
     },
     {
-      "Route": "js/CustomOrder.np21tu7gkh.js",
-      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\CustomOrder.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4467"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"BVcDtAdd41D0N2fgkssDQqi0Sy2qqw1Y55OIhmzzc6k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 18 Oct 2024 23:25:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "np21tu7gkh"
-        },
-        {
-          "Name": "label",
-          "Value": "js/CustomOrder.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-BVcDtAdd41D0N2fgkssDQqi0Sy2qqw1Y55OIhmzzc6k="
-        }
-      ]
-    },
-    {
-      "Route": "js/Discount.dfa1ok0qv3.js",
+      "Route": "js/Discount.5icn55qzh8.js",
       "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Discount.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -9753,7 +9774,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4444"
+          "Value": "5100"
         },
         {
           "Name": "Content-Type",
@@ -9761,11 +9782,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CVP6c7Yu2GplwMdixAmCzPnZIqBQ9HB7wKTyfgMKZC8=\""
+          "Value": "\"86eO145HdNeYFy10zLX3diSEhwEdOBTZk6sm2ZqiXEY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
+          "Value": "Mon, 21 Oct 2024 15:04:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9775,7 +9796,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dfa1ok0qv3"
+          "Value": "5icn55qzh8"
         },
         {
           "Name": "label",
@@ -9783,7 +9804,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CVP6c7Yu2GplwMdixAmCzPnZIqBQ9HB7wKTyfgMKZC8="
+          "Value": "sha256-86eO145HdNeYFy10zLX3diSEhwEdOBTZk6sm2ZqiXEY="
         }
       ]
     },
@@ -9798,7 +9819,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4444"
+          "Value": "5100"
         },
         {
           "Name": "Content-Type",
@@ -9806,11 +9827,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CVP6c7Yu2GplwMdixAmCzPnZIqBQ9HB7wKTyfgMKZC8=\""
+          "Value": "\"86eO145HdNeYFy10zLX3diSEhwEdOBTZk6sm2ZqiXEY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
+          "Value": "Mon, 21 Oct 2024 15:04:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9820,52 +9841,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CVP6c7Yu2GplwMdixAmCzPnZIqBQ9HB7wKTyfgMKZC8="
-        }
-      ]
-    },
-    {
-      "Route": "js/Order.hoiy92yuc4.js",
-      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Order.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5371"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"79tjWX+v4YWsKVrLcal0/OxoCAN79XR0nG7PzquEQVg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hoiy92yuc4"
-        },
-        {
-          "Name": "label",
-          "Value": "js/Order.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-79tjWX+v4YWsKVrLcal0/OxoCAN79XR0nG7PzquEQVg="
+          "Value": "sha256-86eO145HdNeYFy10zLX3diSEhwEdOBTZk6sm2ZqiXEY="
         }
       ]
     },
@@ -9880,7 +9856,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5371"
+          "Value": "6912"
         },
         {
           "Name": "Content-Type",
@@ -9888,11 +9864,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"79tjWX+v4YWsKVrLcal0/OxoCAN79XR0nG7PzquEQVg=\""
+          "Value": "\"kRZrEfArAgJPQelLyE/FmOj3FGpNjS4Q3IMstwdyIQ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:31:07 GMT"
+          "Value": "Wed, 23 Oct 2024 15:05:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9902,13 +9878,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-79tjWX+v4YWsKVrLcal0/OxoCAN79XR0nG7PzquEQVg="
+          "Value": "sha256-kRZrEfArAgJPQelLyE/FmOj3FGpNjS4Q3IMstwdyIQ8="
         }
       ]
     },
     {
-      "Route": "js/Products.cg13fz6mjv.js",
-      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Products.js",
+      "Route": "js/Order.xki67vjkad.js",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Order.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9917,7 +9893,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4592"
+          "Value": "6912"
         },
         {
           "Name": "Content-Type",
@@ -9925,11 +9901,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5BqGcgm0MdXvf3d4Utyoz+T3OP4vq7JrnS1NZV4w+k4=\""
+          "Value": "\"kRZrEfArAgJPQelLyE/FmOj3FGpNjS4Q3IMstwdyIQ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:29:25 GMT"
+          "Value": "Wed, 23 Oct 2024 15:05:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9939,7 +9915,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cg13fz6mjv"
+          "Value": "xki67vjkad"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Order.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRZrEfArAgJPQelLyE/FmOj3FGpNjS4Q3IMstwdyIQ8="
+        }
+      ]
+    },
+    {
+      "Route": "js/Products.69dmtlifr5.js",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Products.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mn3qm4NMs7h2xgoC+P+GBJ64WRg9DL85PU+0UCfoUfs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 14:16:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "69dmtlifr5"
         },
         {
           "Name": "label",
@@ -9947,7 +9968,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-5BqGcgm0MdXvf3d4Utyoz+T3OP4vq7JrnS1NZV4w+k4="
+          "Value": "sha256-mn3qm4NMs7h2xgoC+P+GBJ64WRg9DL85PU+0UCfoUfs="
         }
       ]
     },
@@ -9962,7 +9983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4592"
+          "Value": "5134"
         },
         {
           "Name": "Content-Type",
@@ -9970,11 +9991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5BqGcgm0MdXvf3d4Utyoz+T3OP4vq7JrnS1NZV4w+k4=\""
+          "Value": "\"mn3qm4NMs7h2xgoC+P+GBJ64WRg9DL85PU+0UCfoUfs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Oct 2024 01:29:25 GMT"
+          "Value": "Wed, 23 Oct 2024 14:16:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9984,7 +10005,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5BqGcgm0MdXvf3d4Utyoz+T3OP4vq7JrnS1NZV4w+k4="
+          "Value": "sha256-mn3qm4NMs7h2xgoC+P+GBJ64WRg9DL85PU+0UCfoUfs="
         }
       ]
     },
@@ -10011,7 +10032,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Sep 2024 16:45:51 GMT"
+          "Value": "Mon, 21 Oct 2024 00:15:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10048,7 +10069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Sep 2024 16:45:51 GMT"
+          "Value": "Mon, 21 Oct 2024 00:15:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10071,7 +10092,7 @@
       ]
     },
     {
-      "Route": "js/User.936by2kcd6.js",
+      "Route": "js/User.bggbgyb5e1.js",
       "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\User.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -10081,7 +10102,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4438"
+          "Value": "5076"
         },
         {
           "Name": "Content-Type",
@@ -10089,11 +10110,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ayK+ScT8Ote4Iz6dSCRqxaGZVMd8t1wA/PInRKmXtD8=\""
+          "Value": "\"9Q9V8mXUVrGZb7+j1e9usC6QgGu/PcPad5f7F5cjENY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Oct 2024 20:53:39 GMT"
+          "Value": "Mon, 21 Oct 2024 15:02:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10103,7 +10124,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "936by2kcd6"
+          "Value": "bggbgyb5e1"
         },
         {
           "Name": "label",
@@ -10111,7 +10132,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ayK+ScT8Ote4Iz6dSCRqxaGZVMd8t1wA/PInRKmXtD8="
+          "Value": "sha256-9Q9V8mXUVrGZb7+j1e9usC6QgGu/PcPad5f7F5cjENY="
         }
       ]
     },
@@ -10126,7 +10147,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4438"
+          "Value": "5076"
         },
         {
           "Name": "Content-Type",
@@ -10134,11 +10155,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ayK+ScT8Ote4Iz6dSCRqxaGZVMd8t1wA/PInRKmXtD8=\""
+          "Value": "\"9Q9V8mXUVrGZb7+j1e9usC6QgGu/PcPad5f7F5cjENY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 15 Oct 2024 20:53:39 GMT"
+          "Value": "Mon, 21 Oct 2024 15:02:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10148,7 +10169,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ayK+ScT8Ote4Iz6dSCRqxaGZVMd8t1wA/PInRKmXtD8="
+          "Value": "sha256-9Q9V8mXUVrGZb7+j1e9usC6QgGu/PcPad5f7F5cjENY="
         }
       ]
     },
@@ -18349,6 +18370,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "style.css",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "922"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ1qVlEy4JO2kb/tFrhIqkPto8pyGIRtUaVHxJqgW7o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Oct 2024 19:30:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ1qVlEy4JO2kb/tFrhIqkPto8pyGIRtUaVHxJqgW7o="
+        }
+      ]
+    },
+    {
+      "Route": "style.vtjm1lt43f.css",
+      "AssetFile": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\wwwroot\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "922"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HQ1qVlEy4JO2kb/tFrhIqkPto8pyGIRtUaVHxJqgW7o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Oct 2024 19:30:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vtjm1lt43f"
+        },
+        {
+          "Name": "label",
+          "Value": "style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HQ1qVlEy4JO2kb/tFrhIqkPto8pyGIRtUaVHxJqgW7o="
         }
       ]
     }
