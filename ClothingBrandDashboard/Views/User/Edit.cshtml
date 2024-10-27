@@ -1,0 +1,46 @@
+﻿@using ClothingBrandDashboard.ModelVW
+@model CreateUserWithDrop
+@{
+    ViewBag.bigtitle = "User Management";
+    ViewBag.smalltitle = "Edit ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<form asp-action="Edit" method="post">
+    <input asp-for="Name" value="update" hidden class="form-control" />
+    <input asp-for="Password" value="Mohamed$7" hidden class="form-control" />
+    <input asp-for="ConfirmPassword" value="Mohamed$7"  hidden class="form-control" />
+
+
+
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+   
+   
+    <div>
+        <label asp-for="Role" class="control-label"></label>
+
+        <select asp-for="Role" class="form-control" asp-items="Model.Roles">
+            <option disabled selected> --Select Role-- </option>
+        </select>
+        @*  <label asp-for="CategoryId"></label>
+        <input asp-for="CategoryId" class="form-control" />
+        <span asp-validation-for="CategoryId" class="text-danger"></span> *@
+    </div>
+    <hr />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<a asp-action="Index">Back to List</a>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

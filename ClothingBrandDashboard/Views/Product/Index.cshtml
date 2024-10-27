@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.bigtitle = "Product Management";
+    ViewBag.smalltitle = "All Products ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .dt-search{
+            display: none;
+        }
+
+        .dt-length {
+            display: none;
+        }
+
+        .search-wrapper {
+            display: flex;
+            align-items: center; /* Aligns items vertically */
+        }
+
+        #customSearch,
+        #categoryDropdown {
+            width:188px;
+            height: 38px; /* Match the height of the input field */
+            margin-right: 15px; /* Space between input and dropdown */
+        }
+
+        #categoryDropdown {
+            flex-grow: 1; /* Make the dropdown take the remaining width if desired */
+        }
+
+
+        
+    </style>
+}
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="col-auto">
+
+            <div class="search-wrapper">
+                @* <i class="fas fa-search" id="searchIcon"></i> *@
+                <input type="text" id="customSearch" placeholder="Search..." >
+                <select id="categoryDropdown" >
+                    <option value="">Filter Category</option> <!-- Default option -->
+                </select>
+                <a href="/Product/Create" class="btn btn-primary" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center; margin-right: 10px;">Create</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Category name</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock Quantity</th>
+            <th>Discount</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+</table>
+@section Scripts {
+
+    @* <h2>hi</h2> *@
+    <script src="~/js/Products.js"></script>
+
+
+
+}
