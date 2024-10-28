@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj": {}
+    "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj": {}
   },
   "projects": {
-    "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj": {
+    "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
+        "projectUniqueName": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
         "projectName": "ClothingBrandDashboard",
-        "projectPath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
-        "packagesPath": "C:\\Users\\Mohamed Ramadan\\.nuget\\packages\\",
-        "outputPath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\obj\\",
+        "projectPath": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
+        "packagesPath": "C:\\Users\\AhmedShaban\\.nuget\\packages\\",
+        "outputPath": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mohamed Ramadan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AhmedShaban\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,9 +38,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net7.0": {
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.7.24407.12\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

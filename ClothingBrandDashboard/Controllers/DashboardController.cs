@@ -102,9 +102,9 @@ namespace ClothingBrandDashboard.Controllers
             ViewData["users"] = users.Count();
             ViewData["discounts"] = discounts.Count();
             ViewData["customOrders"] = customOrders.Count();
-            ViewData["totalRevenue"] = totalRevenue.ToString("C");
-            ViewData["totalCost"] = ((totalRevenue / 100) *80).ToString("C");
-            ViewData["totalProfit"] = ((totalRevenue / 100 )* 20).ToString("C");
+            ViewData["totalRevenue"] = totalRevenue.ToString();
+            ViewData["totalCost"] = ((totalRevenue / 100) *80).ToString();
+            ViewData["totalProfit"] = ((totalRevenue / 100 )* 20).ToString();
             ViewData["totalQuantity"] = totalQuantity;
             ViewData["enrolls"] = Enrolls.Count();
 

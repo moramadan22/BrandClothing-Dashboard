@@ -26,8 +26,11 @@
         <span asp-validation-for="Price" class="text-danger"></span>
 
     </div>
+    <br />
+ 
 
     <div>
+        <label >Category</label>
         <select asp-for="CategoryId" class="form-control" asp-items="Model.Categories">
             <option disabled selected> --Select Category-- </option>
         </select>
@@ -73,7 +76,7 @@
         <span asp-validation-for="CategoryId" class="text-danger"></span> *@
 
     </div>
-
+    <br />   <br />
     <div>
         <button type="submit" class="btn btn-primary"> Create</button>
         <a asp-action="Index" asp-controller="Product" class="btn btn-warning"> Back Index</a>

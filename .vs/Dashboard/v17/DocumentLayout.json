@@ -1,9 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\",
+  "WorkspaceRootPath": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\ai\\graduation_dashboard\\dashboard\\brandclothing-dashboard\\clothingbranddashboard\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\web .net\\days\\graduationproject\\new folder\\new dashboard\\brandclothing-dashboard\\clothingbranddashboard\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\web .net\\days\\graduationproject\\new folder\\new dashboard\\brandclothing-dashboard\\clothingbranddashboard\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\order\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\order\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\modelvw\\getorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\modelvw\\getorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\wwwroot\\js\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\wwwroot\\js\\order.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\shared\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\shared\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\clothingbranddashboard\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -14,28 +58,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Product\\Create.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Product\\Create.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAE4AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T16:42:06.991Z",
+              "WhenOpened": "2024-10-28T21:44:15.923Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T20:38:24.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAOIBAAAAAAAAAAAYwO4BAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:49:34.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "ClothingBrandDashboard\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAYwGgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:59:43.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAYwMoAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T19:56:46.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Order\\Detail.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Order\\Detail.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Order\\Detail.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Order\\Detail.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T19:56:33.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Order\\Index.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T19:56:20.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetOrder.cs",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ModelVW\\GetOrder.cs",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\ModelVW\\GetOrder.cs",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ModelVW\\GetOrder.cs",
+              "RelativeToolTip": "ClothingBrandDashboard\\ModelVW\\GetOrder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T19:55:59.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.js",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Order.js",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\wwwroot\\js\\Order.js",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\wwwroot\\js\\Order.js",
+              "RelativeToolTip": "ClothingBrandDashboard\\wwwroot\\js\\Order.js",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAUwCsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-28T19:55:20.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T19:51:07.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Dashboard.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T19:51:04.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\web .net\\days\\GraduationProject\\New folder\\New Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T16:42:06.991Z"
             }
           ]
         }

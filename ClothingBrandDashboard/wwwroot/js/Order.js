@@ -23,7 +23,7 @@ function loadData() {
             "url": "/Order/GetData"
         },
         "columns": [
-            { "data": "id" },
+            { "data": "orderId" },
             {
                 "data": "orderItems",
                 "render": function (data) {
@@ -41,7 +41,7 @@ function loadData() {
                 }
             },
             {
-                "data": "id",
+                "data": "orderId",
                 "render": function (data) {
                     return `
                     <div class="d-flex">
