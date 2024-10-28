@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uxQvi+l7Nx5wEYSeO4hwbmIHALhlO7qAuAExD/hFoT4=",
+  "Hash": "ow0pG4r7InlIXBwFHjitONXVSZ9N7EB946syjkY1RJw=",
   "Source": "ClothingBrandDashboard",
   "BasePath": "_content/ClothingBrandDashboard",
   "Mode": "Default",
@@ -3397,6 +3397,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\web .net\\days\\GraduationProject\\New folder\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\wwwroot\\style.css",
+      "SourceId": "ClothingBrandDashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\web .net\\days\\GraduationProject\\New folder\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\wwwroot\\",
+      "BasePath": "_content/ClothingBrandDashboard",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ]
 }

@@ -24,7 +24,7 @@ namespace ClothingBrandDashboard.Controllers
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
          
          */
-        HttpClient client =new HttpClient();
+        HttpClient client = new HttpClient();
         public string endpoint = "https://localhost:7108/api/Product";
         public string endpointCat = "https://localhost:7108/api/Category";
         public string endpointDis = "https://localhost:7108/api/Discount";
@@ -43,7 +43,7 @@ namespace ClothingBrandDashboard.Controllers
         {
 
 
-            
+
 
             //var token = HttpContext.Session.GetString("AccessToken");
 
@@ -80,13 +80,33 @@ namespace ClothingBrandDashboard.Controllers
             }
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             //----------------------------
-            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             List<ProductCat> products = new List<ProductCat>();
             products = await client.GetFromJsonAsync<List<ProductCat>>(endpoint);
             return Json(new { data = products });
-          
+
         }
+
+
+        public async Task<IActionResult> GetCategories()
+        {
+
+            var token = HttpContext.Session.GetString("AccessToken");
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized();
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+          
+            categories = await client.GetFromJsonAsync<List<GetCategory>>(endpointCat);
+            return Json(new { categories });
+
+        }
+
+
+
+
+
 
         [HttpGet]
         public async  Task<IActionResult> Create()

@@ -1,11 +1,18 @@
 var dtable;
 $(document).ready(function () {
     loadData();
+    $('#customSearch').on('keyup', function () {
+        if (dtable && typeof dtable.search === 'function') {
+            dtable.search(this.value).draw(); // Filter the DataTable with the custom input
+        } else {
+            console.error("dtable is not defined or not a DataTable instance");
+        }
+    });
 
 });
 
 function loadData() {
-    dtable = $("#myTable").dataTable({
+    dtable = $("#myTable").DataTable({
         "ajax": {
             "url": "/Category/GetData"
         },
@@ -16,8 +23,11 @@ function loadData() {
                 "data": "id",
                 "render": function (data) {
                     return `
-                    <a href="/Category/Edit/${data}" class="btn btn-warning" >Edit</a>
-                    <a onClick= x("/Category/Delete/${data}") class="btn btn-danger">Delete</a> 
+                    <div class="d-flex">
+                      <a href="/Category/Edit/${data}" class="btn btn-warning" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center; margin-right: 10px;">Edit</a>
+                      <a onClick="x('/Category/Delete/${data}')" class="btn btn-danger" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center;">Delete</a>
+                    </div>
+
                     `
                 }
             }
@@ -50,11 +60,11 @@ function x(url) {
                 url: url,
                 type: "DELETE",
                 success: function (data) {
-                    console.log(data)
+                    //console.log(data)
 
                     if (data.success) {
                         //dtable.ajax.reload();
-                        toaster.success(data.message);
+                     /*   toaster.success(data.message);*/
                         //window.location.reload();
 
                     }
@@ -73,10 +83,10 @@ function x(url) {
                 icon: "success"
 
             });
-            //window.location.reload();
-            //dtable.ajax.reload();
+            
 
-            console.log("r2")
+            window.location.reload();
+
 
         } else if (
             /* Read more about handling dismissals below */

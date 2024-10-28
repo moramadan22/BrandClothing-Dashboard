@@ -1,12 +1,36 @@
 ﻿@{
     ViewBag.bigtitle = "Discount Management";
-    ViewBag.smalltitle = "all Discounts ";
+    ViewBag.smalltitle = "All Discounts ";
     Layout = "~/Views/Shared/_Dashboard.cshtml";
 }
-<div>
-    <a href="/Discount/Create" class="btn btn-primary">Create</a>
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <style>
+        .dt-search {
+            display: none;
+        }
+
+        .dt-length {
+            display: none;
+        }
+    </style>
+}
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="col-auto">
+
+            <div class="search-wrapper">
+                <i class="fas fa-search" id="searchIcon"></i>
+                <input type="text" id="customSearch" placeholder="Search...">
+                <a href="/Discount/Create" class="btn btn-primary ms-2">Create</a>
+
+            </div>
+        </div>
+    </div>
 </div>
+
 <table id="myTable" class="table table-hover">
     <thead>
         <tr>
@@ -22,7 +46,7 @@
 </table>
 @section Scripts {
 
-    <h2>hi</h2>
+    @* <h2>hi</h2> *@
     <script src="~/js/Discount.js"></script>
 
 

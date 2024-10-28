@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5BTa/HDg1iwOD0M93XXQNoIDOiZjUhJZi+pOPxnRnQWadxIuq+T/o0uDPThfeh7hH7Gv9tNqgO5lF5O50sSzdA==",
+  "dgSpecHash": "2l15xMl/tOD9FftAEyjydFOC5v3KMjfqX5EmIi2VjcYOYk9HaDuwy7EA/MCC5vZDB7tr7BEeumBj41t6B9bb9Q==",
   "success": true,
   "projectFilePath": "D:\\web .net\\days\\GraduationProject\\New folder\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
   "expectedPackageFiles": [
@@ -86,7 +86,7 @@
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\AhmedShaban\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\AhmedShaban\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\AhmedShaban\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

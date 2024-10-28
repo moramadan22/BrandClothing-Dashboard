@@ -1,5 +1,6 @@
 ﻿using Application.DTOs.Response;
 using ClothingBrandDashboard.Models;
+using ClothingBrandDashboard.ModelVW;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -65,10 +66,21 @@ namespace ClothingBrandDashboard.Controllers
                    
                 }
 
-                ModelState.AddModelError("", "Invalid login attempt.");
+                ModelState.AddModelError("", "Email or Password Invalid.");
+                return View(model);
+
             }
 
             return View(model);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> logout()
+        {
+          //  await _httpClient.GetFromJsonAsync<Boolean>(endpoint + "LogOut");
+            HttpContext.Session.Remove("AccessToken");
+            return RedirectToAction("Login");
         }
     }
 
