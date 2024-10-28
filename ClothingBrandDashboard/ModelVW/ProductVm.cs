@@ -11,7 +11,7 @@ namespace ClothingBrandDashboard.ModelVW
         public string Description { get; set; }
         public decimal Price { get; set; }
         [ValidateNever]
-        public IFormFile Image { get; set; }
+        public IFormFile? Image { get; set; }
         public int StockQuantity { get; set; }
         public string ISBN { get; set; }
 

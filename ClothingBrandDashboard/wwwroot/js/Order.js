@@ -46,7 +46,6 @@ function loadData() {
                     return `
                     <div class="d-flex">
                       <a href="/Order/Detail/${data}" class="btn btn-warning" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center; margin-right: 10px;">Detail</a>
-                      <a onClick="x('/Order/Delete/${data}')" class="btn btn-danger" style="width: 100px; height: 40px; display: flex; justify-content: center; align-items: center;">Delete</a>
                     </div>
                     `;
                 }

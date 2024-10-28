@@ -412,6 +412,10 @@ namespace ClothingBrandDashboard.Controllers
                     Image = productVm.Image,
                     StockQuantity = productVm.StockQuantity
                 };
+                if (productVm.Image != null)
+                    productInput.Image = productVm.Image;
+                else
+                    productInput.Image=null;
 
                 using (var content = new MultipartFormDataContent())
                 {
@@ -424,13 +428,17 @@ namespace ClothingBrandDashboard.Controllers
                     content.Add(new StringContent(productInput.CategoryId.ToString()), "CategoryId");
                     content.Add(new StringContent(productInput.DiscountId.ToString()), "DiscountId");
 
-                    
+
                     if (productInput.Image != null && productInput.Image.Length > 0)
                     {
                         var fileContent = new StreamContent(productInput.Image.OpenReadStream());
                         fileContent.Headers.ContentType = new MediaTypeHeaderValue(productInput.Image.ContentType);
                         content.Add(fileContent, "Image", productInput.Image.FileName);
                     }
+                    else {
+                        content.Add(new StringContent(string.Empty), "Image");
+                    }
+
 
                     try
                     {
@@ -465,6 +473,22 @@ namespace ClothingBrandDashboard.Controllers
                 }
             }
 
+            categories = await client.GetFromJsonAsync<List<GetCategory>>(endpointCat);
+            productVm.Categories = categories.Select(s => new SelectListItem
+            {
+                Text = s.Name,
+                Value = s.Id.ToString(),
+                Selected = s.Id == productVm.CategoryId
+            });
+
+            Disccounts = await client.GetFromJsonAsync<List<GetDiscount>>(endpointDis);
+            productVm.Discounts = Disccounts.Select(s => new SelectListItem
+            {
+                Text = s.Code,
+                Value = s.Id.ToString(),
+                Selected = s.Id == productVm.DiscountId
+
+            });
 
             // If model is invalid or there was an error, return to the same view
             return View(productVm);

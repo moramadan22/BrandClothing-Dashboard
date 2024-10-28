@@ -7,59 +7,119 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap" rel="stylesheet">
+<style>
+    
+    
+    .f {
+        font-family: "Kanit", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+</style>
+
 
 <section class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex align-items-center justify-content-center h-100">
-      <div class="col-md-8 col-lg-7 col-xl-6">
-                <img src="https://thumbs.dreamstime.com/b/sewing-logo-vintage-machine-floral-wreath-watercolor-illustration-white-isolated-background-hobby-homemade-embroidery-281552439.jpg" class="img-fluid" alt="Phone image">
-      </div>
-      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          @* <h3>Admin </h3> *@
-        <form asp-action="Login" method="post">
-            @* <input asp-antiforgery="true" /> *@
-
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                        <label class="form-label" asp-for="Email"> Email</label>
-                <input asp-for="Email" class="form-control form-control-lg" placeholder="Email . ." />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" asp-for="Password">Password</label>
-                <input asp-for="Password" class="form-control form-control-lg" type="password" placeholder="Password . ." />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-
-           @*  <div class="d-flex justify-content-around align-items-center mb-4">
-                <!-- Checkbox -->
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="form1Example3" checked />
-                    <label class="form-check-label" for="form1Example3"> Remember me </label>
+    <div class="container py-5 h-100">
+        <div class="col-lg-12 d-flex justify-content-center align-items-start login-title" >
+            <div class="col text-center">
+                <div>
+                    <i class="fa fa-key" aria-hidden="true"></i>
                 </div>
-                <a href="@Url.Action("ForgotPassword", "Account")">Forgot password?</a>
-            </div> *@
+                <br />
+                <div>
+                    <h3 class="f" >ADMIN PANEL</h3>
+                </div>
+            </div>
+        </div>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
 
-           @*  <div class="divider d-flex align-items-center my-4">
-                <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-            </div> *@
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="~/Images/login-banner.jpg" class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
 
-            @* <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!" role="button">
-                <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-            </a>
-            <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!" role="button">
-                <i class="fab fa-twitter me-2"></i>Continue with Twitter
-            </a> *@
-        </form>
-      </div>
+                <form asp-action="Login">
+
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" asp-for="Email"> Email</label>
+                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Email . ." />
+                        @* <span asp-validation-for="Email" class="text-danger"></span> *@
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" asp-for="Password">Password</label>
+                        <input asp-for="Password" class="form-control form-control-lg" type="password" placeholder="Password . ." />
+                        @* <span asp-validation-for="Password" class="text-danger"></span> *@
+                    </div>
+
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" >Sign in</button>
+                    @* btn-primary btn-lg btn-block #D7BED4*@
+
+
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
+
+
+@*
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                           <form asp-action="Login" method="post">
+                            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                            <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                                <label class="form-label" for="typeEmailX">Email</label>
+                            </div>
+
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                                <label class="form-label" for="typePasswordX">Password</label>
+                            </div>
+
+
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+
+                            </form>
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> *@
+<br />
+<br />
+<br />
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 @* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>

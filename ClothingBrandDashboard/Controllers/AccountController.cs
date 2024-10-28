@@ -1,4 +1,6 @@
-﻿using ClothingBrandDashboard.Models;
+﻿using Application.DTOs.Response;
+using ClothingBrandDashboard.Models;
+using ClothingBrandDashboard.ModelVW;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -7,7 +9,7 @@ namespace ClothingBrandDashboard.Controllers
 {
     public class AccountController : Controller
     {
-        public string endpoint = "https://localhost:7108/api/Account/identity/login";
+        public string endpoint = "https://localhost:7108/api/Account/identity/";
 
         private readonly HttpClient _httpClient;
         public AccountController(HttpClient httpClient)
@@ -37,34 +39,49 @@ namespace ClothingBrandDashboard.Controllers
                 //var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 //var response = await _httpClient.PostAsync("https://api.example.com/api/login", content);
-                var response = await _httpClient.PostAsJsonAsync(endpoint, model);
+                var response = await _httpClient.PostAsJsonAsync(endpoint + "login", model);
 
 
                 if (response.IsSuccessStatusCode)
                 {
                     var responseData = await response.Content.ReadAsStringAsync();
                     var tokenData = JsonConvert.DeserializeObject<TokenResponse>(responseData);
-
+                    var userIdDate = JsonConvert.DeserializeObject<UserID>(responseData);
                     // Store the token (e.g., in session)
-                    HttpContext.Session.SetString("AccessToken", tokenData.Token);
+                    var AccessRole = await _httpClient.GetFromJsonAsync<GeneralResponse>(endpoint + "CurrentUserRole?userId=" + userIdDate.userId);
+                    if (AccessRole.flag)
+                    {
 
-                    return RedirectToAction("Index", "Dashboard");
+                        HttpContext.Session.SetString("AccessToken", tokenData.Token);
+
+                        return RedirectToAction("Index", "Dashboard");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "You are Not Authorized");
+                        return View(model);
+                    }
+                    //var AccessRoleData = await AccessRole.Content.ReadAsStringAsync();
+                    // var roleDate = JsonConvert.DeserializeObject<string>(responseData);
+
                 }
 
-                ModelState.AddModelError("", "Invalid login attempt.");
+                ModelState.AddModelError("", "Email or Password Invalid.");
                 return View(model);
 
             }
 
             return View(model);
         }
+
+
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> logout()
         {
-            return View();
+            //  await _httpClient.GetFromJsonAsync<Boolean>(endpoint + "LogOut");
+            HttpContext.Session.Remove("AccessToken");
+            return RedirectToAction("Login");
         }
-
-
     }
 
 

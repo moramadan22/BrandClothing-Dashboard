@@ -9664,11 +9664,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
+      "projectUniqueName": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
       "projectName": "ClothingBrandDashboard",
-      "projectPath": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
+      "projectPath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
       "packagesPath": "C:\\Users\\Mohamed Ramadan\\.nuget\\packages\\",
-      "outputPath": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\obj\\",
+      "outputPath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mohamed Ramadan\\AppData\\Roaming\\NuGet\\NuGet.Config",

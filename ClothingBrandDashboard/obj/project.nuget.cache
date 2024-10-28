@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d6sGlGR/zLM=",
+  "dgSpecHash": "V0v1S+gbcAc=",
   "success": true,
-  "projectFilePath": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
+  "projectFilePath": "D:\\ai\\graduation_dashboard\\Dashboard\\BrandClothing-Dashboard\\ClothingBrandDashboard\\ClothingBrandDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed Ramadan\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Mohamed Ramadan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

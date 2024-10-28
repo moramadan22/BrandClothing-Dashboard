@@ -13,8 +13,8 @@
     <div class="col-md-4">
         <form method="post" asp-action="Edit" asp-controller="Product" enctype="multipart/form-data">
             <input asp-for="Id" hidden />
-            <input asp-for="Image" hidden />
-
+@*             <input asp-for="Image" hidden />
+ *@
             <div>
                 <label asp-for="Name"></label>
                 <input asp-for="Name" class="form-control" />
@@ -36,7 +36,7 @@
             </div>
 
             <div>
-                @* <label asp-for="CategoryId"></label> *@
+                <label asp-for="CategoryId">Category</label>
                 @* <input asp-for="CategoryId" class="form-control" /> *@
                 <select asp-for="CategoryId" class="form-control" asp-items="Model.Categories">
                     <option disabled > --Select Category-- </option>
@@ -82,7 +82,7 @@
 
             <div>
                 <button type="submit" class="btn btn-success"> Save</button>
-                <a asp-action="Index" asp-controller="Product" class="btn btn-warning"> Back Index</a>
+                <a asp-action="Index" asp-controller="Product" class="btn btn-warning"> Back</a>
 
             </div>
         </form>
@@ -90,7 +90,7 @@
 
     <div class="col-md-4">
         <div class="container">
-            <img src=@ViewData["img"] alt="Alternate Text" height="300" width="300" />
+            <img src="@ViewData["img"]" alt="Alternate Text" height="300" width="300" />
         </div>
     </div>
 
