@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\ai\\graduation_dashboard\\Dashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\ai\\graduation_dashboard\\dashboard\\clothingbranddashboard\\views\\shared\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\views\\shared\\_dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|d:\\ai\\graduation_dashboard\\dashboard\\clothingbranddashboard\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D51D0458-F0EB-45C2-BDBD-F724F80D90F0}|ClothingBrandDashboard\\ClothingBrandDashboard.csproj|solutionrelative:clothingbranddashboard\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Dashboard.cshtml",
-              "DocumentMoniker": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
-              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
-              "ToolTip": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
-              "RelativeToolTip": "ClothingBrandDashboard\\Views\\Shared\\_Dashboard.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHYAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T18:52:44.683Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\ai\\graduation_dashboard\\Dashboard\\ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ClothingBrandDashboard\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAuwL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T09:09:02.496Z",
               "EditorCaption": ""
             }
           ]

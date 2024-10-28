@@ -16,6 +16,10 @@ namespace ClothingBrandDashboard.Controllers
         public string endpointUsers = "https://localhost:7108/api/Account/identity/user-with-role";
         public string endpointCustomOrders = "https://localhost:7108/api/CustomClothingOrder";
         public string endpointDiscount = "https://localhost:7108/api/Discount";
+        public string endpointEnroll = "https://localhost:7108/api/Enroll";
+
+
+        
 
 
 
@@ -71,12 +75,23 @@ namespace ClothingBrandDashboard.Controllers
             List<GetCustomOrder> customOrders = new List<GetCustomOrder>();
             customOrders = await client.GetFromJsonAsync<List<GetCustomOrder>>(endpointCustomOrders);
 
+            List<GetEnroll> Enrolls = new List<GetEnroll>();
+            Enrolls = await client.GetFromJsonAsync<List<GetEnroll>>(endpointEnroll);
+
             decimal totalRevenue = 0;
 
             foreach (var item in orders)
             {
                 totalRevenue += item.TotalPrice;
             }
+
+            decimal totalQuantity = 0;
+
+            foreach (var item in products)
+            {
+                totalQuantity += item.StockQuantity;
+            }
+
 
 
 
@@ -88,6 +103,15 @@ namespace ClothingBrandDashboard.Controllers
             ViewData["discounts"] = discounts.Count();
             ViewData["customOrders"] = customOrders.Count();
             ViewData["totalRevenue"] = totalRevenue.ToString("C");
+            ViewData["totalCost"] = ((totalRevenue / 100) *80).ToString("C");
+            ViewData["totalProfit"] = ((totalRevenue / 100 )* 20).ToString("C");
+            ViewData["totalQuantity"] = totalQuantity;
+            ViewData["enrolls"] = Enrolls.Count();
+
+
+
+
+
 
 
 

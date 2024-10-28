@@ -26,7 +26,6 @@ namespace ClothingBrandDashboard.Controllers
         {
             if (string.IsNullOrEmpty(token))
             {
-                // Handle case where the token is not available
                 return Unauthorized();
             }
             List<GetOrder> Oreders = new List<GetOrder>();

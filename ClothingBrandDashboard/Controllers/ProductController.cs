@@ -71,7 +71,6 @@ namespace ClothingBrandDashboard.Controllers
         }
         public async Task<IActionResult> Getdata()
         {
-
             //------------
             var token = HttpContext.Session.GetString("AccessToken");
             if (string.IsNullOrEmpty(token))
@@ -80,11 +79,9 @@ namespace ClothingBrandDashboard.Controllers
             }
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             //----------------------------
-
             List<ProductCat> products = new List<ProductCat>();
             products = await client.GetFromJsonAsync<List<ProductCat>>(endpoint);
             return Json(new { data = products });
-
         }
 
 

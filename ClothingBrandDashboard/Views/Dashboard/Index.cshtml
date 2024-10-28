@@ -5,7 +5,17 @@
     ViewBag.smalltitle = "Details ";
     Layout = "~/Views/Shared/_Dashboard.cshtml";
     // int num = (int)ViewData["orders"];
+    decimal productsOut = 0;
+    foreach (var ord in Model)
+    {
+        foreach (var item in ord.OrderItems)
+        {
+            productsOut += item.Quantity;
+        }
 
+    }
+    decimal width1 = (decimal)ViewData["totalQuantity"] / productsOut;
+    int width2 = (int)ViewData["enrolls"] / 30;
 }
 
 <div class="app-content">
@@ -142,38 +152,27 @@
                 <!--begin::Row-->
                 <div class="row">
                     <div class="col-md-8">
-                        <p class="text-center"> <strong>Sales: 1 Oct, 2024 - 30 Mar, 2024</strong> </p>
+                        <p class="text-center"> <strong>Sales: 1 Oct, 2024 - 30 Mar, 2025</strong> </p>
                         <div id="sales-chart"></div>
                     </div> <!-- /.col -->
                     <div class="col-md-4">
                         <p class="text-center"> <strong>Goal Completion</strong> </p>
-                        <div class="progress-group">
-                            Add Products to Cart
-                            <span class="float-end"><b>160</b>/200</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar text-bg-primary" style="width: 80%"></div>
-                            </div>
-                        </div> <!-- /.progress-group -->
+                       
                         <div class="progress-group">
                             Complete Purchase
-                            <span class="float-end"><b>310</b>/400</span>
+                            <span class="float-end"><b>@productsOut</b>/ @ViewData["totalQuantity"]</span>
                             <div class="progress progress-sm">
-                                <div class="progress-bar text-bg-danger" style="width: 75%"></div>
+                                <div class="progress-bar text-bg-danger" style="width:@($"{width1}%")"></div>
                             </div>
                         </div> <!-- /.progress-group -->
+                        <br />
                         <div class="progress-group">
-                            <span class="progress-text">Visit Premium Page</span> <span class="float-end"><b>480</b>/800</span>
+                            <span class="progress-text">Student Enrolls</span> <span class="float-end"><b>@ViewData["enrolls"]</b>/ 30</span>
                             <div class="progress progress-sm">
-                                <div class="progress-bar text-bg-success" style="width: 60%"></div>
+                                <div class="progress-bar text-bg-success" style="width:@($"{width1}%")"></div>
                             </div>
                         </div> <!-- /.progress-group -->
-                        <div class="progress-group">
-                            Send Inquiries
-                            <span class="float-end"><b>250</b>/500</span>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar text-bg-warning" style="width: 50%"></div>
-                            </div>
-                        </div> <!-- /.progress-group -->
+                       
                     </div> <!-- /.col -->
                 </div> <!--end::Row-->
             </div> <!-- ./card-body -->
@@ -183,33 +182,33 @@
                     <div class="col-md-3 col-6">
                         <div class="text-center border-end">
                             <span class="text-success">
-                                <i class="bi bi-caret-up-fill"></i> 17%
+                                @* <i class="bi bi-caret-up-fill"></i> 17% *@
                             </span>
-                            <h5 class="fw-bold mb-0">$35,210.43</h5> <span class="text-uppercase">TOTAL REVENUE</span>
+                            <h5 class="fw-bold mb-0">@ViewData["totalRevenue"]</h5> <span class="text-uppercase">TOTAL REVENUE</span>
                         </div>
                     </div> <!-- /.col -->
                     <div class="col-md-3 col-6">
                         <div class="text-center border-end">
                             <span class="text-info">
-                                <i class="bi bi-caret-left-fill"></i> 0%
+                                @* <i class="bi bi-caret-left-fill"></i> 0% *@
                             </span>
-                            <h5 class="fw-bold mb-0">$10,390.90</h5> <span class="text-uppercase">TOTAL COST</span>
+                            <h5 class="fw-bold mb-0">@ViewData["totalCost"]</h5> <span class="text-uppercase">TOTAL COST</span>
                         </div>
                     </div> <!-- /.col -->
                     <div class="col-md-3 col-6">
                         <div class="text-center border-end">
                             <span class="text-success">
-                                <i class="bi bi-caret-up-fill"></i> 20%
+                                @* <i class="bi bi-caret-up-fill"></i> 20% *@
                             </span>
-                            <h5 class="fw-bold mb-0">$24,813.53</h5> <span class="text-uppercase">TOTAL PROFIT</span>
+                            <h5 class="fw-bold mb-0">@ViewData["totalProfit"]</h5> <span class="text-uppercase">TOTAL PROFIT</span>
                         </div>
                     </div> <!-- /.col -->
                     <div class="col-md-3 col-6">
                         <div class="text-center">
                             <span class="text-danger">
-                                <i class="bi bi-caret-down-fill"></i> 18%
+                                @* <i class="bi bi-caret-down-fill"></i> 18% *@
                             </span>
-                            <h5 class="fw-bold mb-0">1200</h5> <span class="text-uppercase">GOAL COMPLETIONS</span>
+                            <h5 class="fw-bold mb-0">@Model.Count</h5> <span class="text-uppercase">GOAL COMPLETIONS</span>
                         </div>
                     </div>
                 </div> <!--end::Row-->
@@ -361,10 +360,14 @@
         // - MONTHLY SALES CHART -
         //-----------------------
 
-        //**************** */
-        let categories = [];
 
-        fetch("/Category/GetData")
+        //                                                                 final------------
+        let categories = [];
+        let categoryData = {}; // Store category data by month
+        let productCategoryMap = {}; // Map product names to category names
+
+        // Fetch product data to create a mapping of product names to category names
+        fetch("/Product/GetData")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -372,38 +375,69 @@
                 return response.json(); // Parse JSON data
             })
             .then(result => {
-                console.log("Fetched data:", result);
+                const products = result.data;
 
-                // Check if result.data is an array and extract names
-                categories = Array.isArray(result.data)
-                    ? result.data.map(category => category.name)
-                    : [];
+                // Create a mapping of product names to their category names
+                products.forEach(product => {
+                    productCategoryMap[product.name] = product.categoryName;
+                    if (!categories.includes(product.categoryName)) {
+                        categories.push(product.categoryName);
+                    }
+                });
 
-                console.log("Category names:", categories);
+                // Initialize categoryData with empty arrays for each category and month
+                categories.forEach(category => {
+                    categoryData[category] = Array(12).fill(0);
+                });
 
-                // Update chart series names after fetching data
+                // Fetch orders data after building the productCategoryMap
+                return fetch("/Order/GetData");
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(result => {
+                const orders = result.data;
+
+                // Process each order and match items to category names
+                orders.forEach(order => {
+                    const orderDate = new Date(order.orderDate);
+                    const monthIndex = orderDate.getMonth(); // Get month index (0 for Jan, 11 for Dec)
+
+                    order.orderItems.forEach(item => {
+                        const productName = item.productName;
+                        const quantity = item.quantity;
+
+                        // Get the category name using the productCategoryMap
+                        const categoryName = productCategoryMap[productName];
+
+                        if (categoryName && categoryData[categoryName]) {
+                            categoryData[categoryName][monthIndex] += quantity; // Accumulate quantity by month
+                        }
+                    });
+                });
+
+                // Prepare series data for ApexCharts
+                const seriesData = categories.map(category => ({
+                    name: category,
+                    data: categoryData[category] || Array(12).fill(0)
+                }));
+
+                // Update chart with the new data
                 sales_chart.updateOptions({
-                    series: categories.map((name, index) => ({
-                        name: name,
-                        data: index === 0 ? [28, 48, 40, 19, 86, 27, 90] :
-                            index === 1 ? [65, 59, 80, 81, 56, 55, 40] :
-                                index === 2 ? [50, 60, 70, 80, 90, 100, 110] :
-                                    [20, 30, 40, 50, 60, 70, 80] // Example data arrays
-                    }))
+                    series: seriesData
                 });
             })
             .catch(error => {
-                console.error('Fetch error:', error); // Handle any errors
+                console.error('Fetch error:', error);
             });
 
         // Initial chart options
         const sales_chart_options = {
-            series: [
-                { name: "SHABAN", data: [28, 48, 40, 19, 86, 27, 90] },
-                { name: "MEKAWY", data: [65, 59, 80, 81, 56, 55, 40] },
-                { name: "Ramadan", data: [50, 60, 70, 80, 90, 100, 110] },
-                { name: "project", data: [20, 30, 40, 50, 60, 70, 80] }
-            ],
+            series: [],
             chart: {
                 height: 180,
                 type: "area",
@@ -416,14 +450,9 @@
             xaxis: {
                 type: "datetime",
                 categories: [
-                    "2024-10-01",
-                    "2024-11-01",
-                    "2024-12-01",
-                    "2025-01-01",
-                    "2025-02-01",
-                    "2025-03-01",
-                    "2025-04-01"
-
+                    "2024-01-01", "2024-02-01", "2024-03-01", "2024-04-01",
+                    "2024-05-01", "2024-06-01", "2024-07-01", "2024-08-01",
+                    "2024-09-01", "2024-10-01", "2024-11-01", "2024-12-01"
                 ]
             },
             tooltip: {
@@ -437,6 +466,198 @@
             sales_chart_options
         );
         sales_chart.render();
+
+
+        //                                                                        end of final
+
+
+
+
+
+
+
+        //tryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy     start
+        // let categories = [];
+        // let categoryData = {}; // Store category data by month
+
+        // // Fetch category data and store in categories array
+        // fetch("/Category/GetData")
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok ' + response.statusText);
+        //         }
+        //         return response.json(); // Parse JSON data
+        //     })
+        //     .then(result => {
+        //         categories = Array.isArray(result.data)
+        //             ? result.data.map(category => category.name)
+        //             : [];
+
+        //         // Initialize categoryData with empty arrays for each category and month
+        //         categories.forEach(category => {
+        //             categoryData[category] = Array(12).fill(0);
+        //         });
+
+        //         // Fetch orders data after fetching categories
+        //         return fetch("/Order/GetData");
+        //     })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok ' + response.statusText);
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(result => {
+        //         const orders = result.data; // Access the orders list
+
+        //         orders.forEach(order => {
+        //             const orderDate = new Date(order.orderDate);
+        //             const monthIndex = orderDate.getMonth(); // Get month index (0 for Jan, 11 for Dec)
+
+        //             // Process each item in the order
+        //             order.orderItems.forEach(item => {
+        //                 const categoryName = item.productName; // Use product name as category
+        //                 const quantity = item.quantity;
+
+        //                 if (categoryData[categoryName]) {
+        //                     categoryData[categoryName][monthIndex] += quantity; // Accumulate quantity by month
+        //                 }
+        //             });
+        //         });
+
+        //         // Prepare series data for ApexCharts
+        //         const seriesData = categories.map(category => ({
+        //             name: category,
+        //             data: categoryData[category] || Array(12).fill(0)
+        //         }));
+        //         console.log(seriesData);
+        //         console.log(seriesData.data);
+
+
+        //         // Update chart with the new data
+        //         sales_chart.updateOptions({
+        //             series: seriesData
+        //         });
+        //     })
+        //     .catch(error => {
+        //         console.error('Fetch error:', error);
+        //     });
+
+        // // Initial chart options
+        // const sales_chart_options = {
+        //     series: [],
+        //     chart: {
+        //         height: 180,
+        //         type: "area",
+        //         toolbar: { show: false },
+        //     },
+        //     legend: { show: true },
+        //     colors: ["#0d6efd", "#20c997", "red", "orange"],
+        //     dataLabels: { enabled: false },
+        //     stroke: { curve: "smooth" },
+        //     xaxis: {
+        //         type: "datetime",
+        //         categories: [
+        //             "2024-01-01", "2024-02-01", "2024-03-01", "2024-04-01",
+        //             "2024-05-01", "2024-06-01", "2024-07-01", "2024-08-01",
+        //             "2024-09-01", "2024-10-01", "2024-11-01", "2024-12-01"
+        //         ]
+        //     },
+        //     tooltip: {
+        //         x: { format: "MMMM yyyy" },
+        //     },
+        // };
+
+        // // Initialize and render the chart
+        // const sales_chart = new ApexCharts(
+        //     document.querySelector("#sales-chart"),
+        //     sales_chart_options
+        // );
+        // sales_chart.render();
+
+
+
+        //tryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy      end
+
+
+
+
+        //**************** */
+        // let categories = [];
+
+        // fetch("/Category/GetData")
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok ' + response.statusText);
+        //         }
+        //         return response.json(); // Parse JSON data
+        //     })
+        //     .then(result => {
+        //         console.log("Fetched data:", result);
+
+        //         // Check if result.data is an array and extract names
+        //         categories = Array.isArray(result.data)
+        //             ? result.data.map(category => category.name)
+        //             : [];
+
+        //         console.log("Category names:", categories);
+
+        //         // Update chart series names after fetching data
+        //         sales_chart.updateOptions({
+        //             series: categories.map((name, index) => ({
+        //                 name: name,
+        //                 data: index === 0 ? [28, 48, 40, 19, 86, 27, 90] :
+        //                     index === 1 ? [65, 59, 80, 81, 56, 55, 40] :
+        //                         index === 2 ? [50, 60, 70, 80, 90, 100, 110] :
+        //                             [20, 30, 40, 50, 60, 70, 80] // Example data arrays
+        //             }))
+        //         });
+        //     })
+        //     .catch(error => {
+        //         console.error('Fetch error:', error); // Handle any errors
+        //     });
+
+        // // Initial chart options
+        // const sales_chart_options = {
+        //     series: [
+        //         { name: "SHABAN", data: [28, 48, 40, 19, 86, 27, 90] },
+        //         { name: "MEKAWY", data: [65, 59, 80, 81, 56, 55, 40] },
+        //         { name: "Ramadan", data: [50, 60, 70, 80, 90, 100, 110] },
+        //         { name: "project", data: [20, 30, 40, 50, 60, 70, 80] }
+        //     ],
+        //     chart: {
+        //         height: 180,
+        //         type: "area",
+        //         toolbar: { show: false },
+        //     },
+        //     legend: { show: true },
+        //     colors: ["#0d6efd", "#20c997", "red", "orange"],
+        //     dataLabels: { enabled: false },
+        //     stroke: { curve: "smooth" },
+        //     xaxis: {
+        //         type: "datetime",
+        //         categories: [
+        //             "2024-10-01",
+        //             "2024-11-01",
+        //             "2024-12-01",
+        //             "2025-01-01",
+        //             "2025-02-01",
+        //             "2025-03-01",
+        //             "2025-04-01"
+
+        //         ]
+        //     },
+        //     tooltip: {
+        //         x: { format: "MMMM yyyy" },
+        //     },
+        // };
+
+        // // Initialize and render the chart
+        // const sales_chart = new ApexCharts(
+        //     document.querySelector("#sales-chart"),
+        //     sales_chart_options
+        // );
+        // sales_chart.render();
 
         //**************** */
 
